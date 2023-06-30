@@ -69,7 +69,7 @@ body {
     align-items: center;
     width: 88px;
     height: 100%;
-    row-gap: 60px;
+    row-gap: 75px;
     background-color: rgba(0, 0, 0, 0.25);
     transition: 0.5s ease-in-out;
 }
@@ -233,13 +233,15 @@ body {
     transition: .5s ease-in-out;
     width: 100%;
     height: 100%;
+    margin-top: 5em;
 }
 
-.video-wrapper video {
+.video-wrapper {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .lanes:hover .video-wrapper {

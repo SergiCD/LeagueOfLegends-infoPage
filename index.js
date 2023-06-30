@@ -1,12 +1,12 @@
 const videos = [
     {
         id: 0,
-        videoSrc: "./img/dark-cosmic-lux.gif",
+        videoSrc: "./img/gwen.jpg",
         iconSrc: "./img/top-icon.png",
     },
     {
         id: 1,
-        videoSrc: "./img/dark-cosmic-lux.gif",
+        videoSrc: "./img/lux.png",
         iconSrc: "./img/jung-icon.png",
     }, {
         id: 2,
@@ -29,9 +29,7 @@ lanes.innerHTML = "";
 for (let i = 0; i < videos.length; i++) {
     lanes.innerHTML += `
     <li class="lane" style="--index:${videos[i].id}">
-        <div class="video-wrapper">
-            <video src="${videos[i].videoSrc}"></video>
-        </div>
+        <div class="video-wrapper" style="background-image: url('${videos[i].videoSrc}');"></div>
         <span class="lane-icon">
             <img src="${videos[i].iconSrc}" alt=""/>
         </span>
