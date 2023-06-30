@@ -1,7 +1,7 @@
 const videos = [
     {
         id: 0,
-        videoSrc: "./img/gwen.jpg",
+        videoSrc: "./img/sett.jpg",
         iconSrc: "./img/top-icon.png",
     },
     {
