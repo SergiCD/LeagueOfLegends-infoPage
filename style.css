@@ -1,0 +1,331 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: #03041e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+:root {
+    /* --container-width: 1280px; */
+    --container-width: 100%;
+
+    --main-color: #d0a85c;
+    --gray-color: #232323;
+    --black-color: #000000;
+}
+
+.container {
+    position: relative;
+    width: var(--container-width);
+    /* aspect-ratio: 16/9; */
+    border-radius: 20px;
+    background-image: url('./img/dark-cosmic-lux-img.jpg');
+    height: 100vh;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.container .introduce-part {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.introduce-part::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #00000087 0%, #00000087);
+    z-index: 0;
+}
+
+.introduce-part>* {
+    z-index: 1;
+}
+
+.introduce-part .side-bar {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 88px;
+    height: 100%;
+    row-gap: 60px;
+    background-color: rgba(0, 0, 0, 0.25);
+    transition: 0.5s ease-in-out;
+}
+
+.side-bar .homepage-logo {
+    position: absolute;
+    top: 40px;
+}
+
+.side-bar .homepage-logo img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.side-bar .icon {
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    display: grid;
+    place-items: center;
+    opacity: 45%;
+    transition: .25s ease-in-out;
+}
+
+.side-bar .icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.icon:hover {
+    opacity: 1;
+}
+
+.introduce-part .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 540px;
+    height: 100%;
+    padding: 148px 0;
+    margin-left: 88px;
+}
+
+.content>* {
+    overflow: hidden;
+}
+
+.content>*>* {
+    transition: .5s ease-in-out;
+    transition-delay: calc((4 - var(--index))*0.1s);
+}
+
+.content .main-logo {
+    width: 540px;
+    height: 220px;
+}
+
+.content .main-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.content .slogan {
+    font-size: 2.2rem;
+    color: white;
+}
+
+.content .discover-btn button {
+    cursor: pointer;
+    width: 305px;
+    height: 75px;
+    border: none;
+    outline: none;
+    background-color: var(--main-color);
+    color: white;
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.introduce-part .riot-logo {
+    position: absolute;
+    right: 88px;
+    bottom: 40px;
+    width: 200px;
+    overflow: hidden;
+}
+
+.riot-logo img {
+    width: 100%;
+    object-fit: contain;
+    transition: 0.5s ease-in-out;
+}
+
+/* .introduce-part {
+    opacity: 0;
+} */
+
+.container .detail-part {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    transition: 0.75s ease-in-out;
+}
+
+.detail-part .lanes {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    column-gap: 20px;
+    width: 100%;
+    height: calc(100% - 80px);
+    overflow: hidden;
+}
+
+.lanes .lane {
+    cursor: pointer;
+    position: relative;
+    width: 200px;
+    height: 100%;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    transition: .7s ease-in-out;
+    transform: translateY(0);
+    transition-delay: calc(var(--index) * 0.1s);
+}
+
+.lane::before,
+.lane::after {
+    position: absolute;
+    content: "";
+    width: 300px;
+    height: 150px;
+    transform: rotate(-40deg);
+    background-color: #fff;
+    bottom: 0;
+    z-index: 1;
+    transition: .5s ease-in-out;
+}
+
+.lane::after {
+    background-color: var(--main-color);
+    z-index: 0;
+    margin-bottom: 40px;
+}
+
+.lane .video-wrapper {
+    transition: .5s ease-in-out;
+    width: 100%;
+    height: 100%;
+}
+
+.video-wrapper video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.lanes:hover .video-wrapper {
+    filter: grayscale(100%);
+}
+
+.lanes:hover>.lane:hover .video-wrapper {
+    filter: grayscale(0);
+}
+
+.lanes:hover>.lane:hover::before {
+    background-color: white;
+}
+
+.lanes:hover>.lane:hover::after {
+    background-color: var(--main-color);
+}
+
+.lanes:hover .lane::before {
+    background-color: var(--black-color);
+}
+
+.lanes:hover .lane::after {
+    background-color: var(--gray-color);
+}
+
+.lane .lane-icon {
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    bottom: 60px;
+    z-index: 100;
+}
+
+.lane-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.detail-part .back-btn button {
+    cursor: pointer;
+    font-size: 2rem;
+    color: white;
+    text-transform: uppercase;
+    width: 200px;
+    height: 60px;
+    border: 1px solid var(--main-color);
+    outline: none;
+    background: none;
+    transform: translateY(0%);
+    opacity: 1;
+    transition: 0.5s ease-in-out;
+}
+
+.back-btn:hover button {
+    background: var(--main-color);
+}
+
+.introduce-part.hide,
+.detail-part.hide {
+    pointer-events: none;
+}
+
+.introduce-part.hide .side-bar {
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+.introduce-part.hide .content>*>* {
+    transform: translateY(-100%);
+    transition-delay: calc(var(--index) * 0.15s);
+    opacity: 0;
+}
+
+.introduce-part.hide .riot-logo img {
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+.detail-part.hide .lanes .lane {
+    transform: translateY(-100%);
+    transition-delay: calc((4 - var(--index)) * 0.1s);
+}
+
+.detail-part.hide .back-btn button {
+    opacity: 0;
+    transform: translateY(200%);
+}
