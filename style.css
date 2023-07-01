@@ -17,10 +17,11 @@ body {
     min-height: 100vh;
 }
 
-p {
-    color: white;
+.copyright {
     font-size: 14px;
-    margin-top: 5em;
+    color: white;
+    transition: .5s ease-in-out;
+    transition-delay: calc((4 - var(--index))*0.1s);
 }
 
 :root {
@@ -325,6 +326,12 @@ p {
 
 .introduce-part.hide .riot-logo img {
     transform: translateY(-100%);
+    opacity: 0;
+}
+
+.introduce-part.hide .copyright {
+    transform: translateY(-100%);
+    transition-delay: calc(var(--index) * 0.15s);
     opacity: 0;
 }
 
