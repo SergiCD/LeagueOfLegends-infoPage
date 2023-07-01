@@ -38,10 +38,11 @@ for (let i = 0; i < videos.length; i++) {
 }
 const introducePart = container.querySelector(".introduce-part");
 const detailPart = container.querySelector(".detail-part");
-const videoWrapper = container.querySelectorAll(".video-wrapper");
 const discoverBtn = container.querySelector(".discover-btn");
 const backBtn = container.querySelector(".back-btn");
 
+//In case you want to use videos instead of imgs of the champions
+// const videoWrapper = container.querySelectorAll(".video-wrapper");
 // videoWrapper.forEach((wrapper) => {
 //     if (wrapper) {
 //         wrapper.addEventListener("mouseover", () => {
