@@ -31,7 +31,7 @@ body {
     width: var(--container-width);
     /* aspect-ratio: 16/9; */
     border-radius: 20px;
-    background-image: url('./img/dark-cosmic-lux-img.jpg');
+    /* background-image: url(); */
     height: 100vh;
     background-size: cover;
     overflow: hidden;

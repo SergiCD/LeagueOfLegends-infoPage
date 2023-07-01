@@ -6,19 +6,19 @@ const videos = [
     },
     {
         id: 1,
-        videoSrc: "./img/lux.png",
+        videoSrc: "./img/yi.jpg",
         iconSrc: "./img/jung-icon.png",
     }, {
         id: 2,
-        videoSrc: "./img/dark-cosmic-lux.gif",
+        videoSrc: "./img/diana.jpg",
         iconSrc: "./img/mid-icon.png",
     }, {
         id: 3,
-        videoSrc: "./img/dark-cosmic-lux.gif",
+        videoSrc: "./img/mf.jpg",
         iconSrc: "./img/bottom-icon.png",
     }, {
         id: 4,
-        videoSrc: "./img/dark-cosmic-lux.gif",
+        videoSrc: "./img/bardo.jpg",
         iconSrc: "./img/supp-icon.png",
     },
 ]
