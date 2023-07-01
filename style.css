@@ -17,6 +17,12 @@ body {
     min-height: 100vh;
 }
 
+p {
+    color: white;
+    font-size: 14px;
+    margin-top: 5em;
+}
+
 :root {
     /* --container-width: 1280px; */
     --container-width: 100%;
