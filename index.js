@@ -42,16 +42,16 @@ const videoWrapper = container.querySelectorAll(".video-wrapper");
 const discoverBtn = container.querySelector(".discover-btn");
 const backBtn = container.querySelector(".back-btn");
 
-videoWrapper.forEach((wrapper) => {
-    if (wrapper) {
-        wrapper.addEventListener("mouseover", () => {
-            wrapper.children[0].play();
-        })
-        wrapper.addEventListener("mouseout", () => {
-            wrapper.children[0].pause();
-        })
-    }
-})
+// videoWrapper.forEach((wrapper) => {
+//     if (wrapper) {
+//         wrapper.addEventListener("mouseover", () => {
+//             wrapper.children[0].play();
+//         })
+//         wrapper.addEventListener("mouseout", () => {
+//             wrapper.children[0].pause();
+//         })
+//     }
+// })
 
 discoverBtn.addEventListener("click", () => {
     introducePart.classList.add("hide");
